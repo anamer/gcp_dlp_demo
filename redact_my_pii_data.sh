@@ -5,5 +5,5 @@ output_file='mi_pii_data_redacted.csv'
 rm $output_file 2> /dev/null
 while read line; do
 # reading each line
-python deid.py deid_mask --info_types FIRST_NAME LAST_NAME EMAIL_ADDRESS DATE PHONE_NUMBER DOMAIN_NAME  LOCATION IBAN_CODE  ORGANIZATION_NAME  -n 12 -m '*' assafproject-2 "$line" >> $output_file
+python deid.py deid_mask --info_types FIRST_NAME LAST_NAME EMAIL_ADDRESS DATE PHONE_NUMBER DOMAIN_NAME  LOCATION IBAN_CODE  ORGANIZATION_NAME  -n 12 -m '*' $PROJECT_ID "$line" >> $output_file
 done < $filename
