@@ -1,7 +1,8 @@
 #!/bin/bash
+# namera@
 # Redact pii data from csv file, keep CC and role only
 filename='my_pii_data.csv'
-output_file='mi_pii_data_redacted.csv'
+output_file='my_pii_data_redacted.csv'
 rm $output_file 2> /dev/null
 while read line; do
 # reading each line
